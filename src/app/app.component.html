@@ -1,11 +1,26 @@
-<h1>Flush</h1>
+<!-- <h1>Flush</h1>
 
 <div *ngIf="auth.user$ | async as user; else login">
     {{ user | json }}
     <hr>
-    <button mat-raised-button color="primary" class="button" (click)="auth.signOut()" >Sign Out</button>
+    <button mat-raised-button color="primary" class="button" (click)="auth.signOut()">Sign Out</button>
 </div>
 <ng-template #login>
+    
     <button mat-raised-button color="primary" class="button" (click)="auth.googleSignin()">Login google</button>
 </ng-template>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+
+
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+        <!--this is a place for us to add side-nav code-->
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <!--in here all the content must reside. We will add a navigation header as well-->
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>
